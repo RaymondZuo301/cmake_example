@@ -2,7 +2,7 @@
 
 ![C/C++ CI](https://github.com/RaymondZuo301/cmake_example/workflows/C/C++%20CI/badge.svg)
 
-This project is an example of a CMake & C++ project
+This is an example of CMake & C++ project.
 
 # Dependence
 
