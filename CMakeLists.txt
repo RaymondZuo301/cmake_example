@@ -49,7 +49,11 @@ setup_install()
 setup_uninstall()
 
 # <构建>
-add_subdirectory(doc)                           # 文档
+option(BUILD_DOC "Build tools" OFF)
+if(BUILD_DOC)
+    add_subdirectory(doc)                       # 文档
+endif()
+
 add_subdirectory(3rdparty)                      # 第三方库
 add_subdirectory(include)                       # 头文件
 add_subdirectory(src)                           # 源文件
