@@ -1,0 +1,25 @@
+name: C/C++ CI
+
+on: [push]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    
+    steps:
+    - uses: actions/checkout@v2
+    - name: build
+      run: |
+        mkdir build
+        cd build
+        cmake ..
+        make
+    - name: install
+      run: make install
+    - name: pack
+      run: cpack ./CPackConfig.cmake
+    - name: test
+      run: make test
+    - name: doc
+      run: make doc

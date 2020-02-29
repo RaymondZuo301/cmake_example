@@ -1,0 +1,11 @@
+# Lib           ray::math
+# Version       1.0.0
+# Variable      ray::math
+# Intro         a cmake sample project
+
+@PACKAGE_INIT@
+
+include("${CMAKE_CURRENT_LIST_DIR}/RayMathTargets.cmake")
+check_required_components(
+  "math"
+  )
