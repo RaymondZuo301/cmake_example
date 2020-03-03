@@ -1,4 +1,7 @@
 macro(setup_gtest)
+  find_package(GTest)
+  if(NOT GTEST_FOUND)
+
   include(FetchContent)
 
   FetchContent_Declare(
@@ -34,4 +37,5 @@ macro(setup_gtest)
       endforeach()
     endif()
   endif()
+endif()
 endmacro()
