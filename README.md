@@ -7,9 +7,9 @@ This is an example of CMake & C++ project.
 # Dependence
 
 - gtest
-- dmake
-- doxygen
-- graphviz
+- cmake-3.10+
+- doxygen(sudo apt-get install doxygen)
+- graphviz(sudo apt-get install graphviz)
 
 # Build
 
@@ -36,11 +36,13 @@ dpkg -i XXXXX.deb
 # Test
 
 ```bash
+cmake .. -DBUILD_TEST=1
 make test
 ```
 
 # Doc
 
 ```bash
+cmake .. -DBUILD_DOC=1
 make doc
 ```
